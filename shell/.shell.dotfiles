@@ -1,0 +1,21 @@
+export PATH="$PATH:/opt/p4v-2019.1.1797168:/webdev/Tools/lazy/bin"
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto
+export P4CONFIG=/webdev/.perforce
+
+export EDITOR=vim
+
+alias l="ls -lah"
+
+alias mux="tmuxinator"
+alias tks="tmux kill-session"
+
+alias ga="git add"
+alias gb="git branch"
+alias gcav="git commit -av"
+alias gcl="git clone"
+alias gco="git checkout"
+alias gl="git pull"
+alias gp="git push"
+alias gs="git status"
+
+[ -f ~/.shell.local ] && source ~/.shell.local
