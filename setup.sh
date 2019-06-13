@@ -2,6 +2,7 @@
 
 [ ! -f ~/.shell.dotfiles ] && ln -s "$(pwd)/shell/.shell.dotfiles" ~/.shell.dotfiles
 [ ! -f ~/.tmux.conf ] && ln -s "$(pwd)/tmux/.tmux.conf" ~/.tmux.conf
+[ ! -f ~/.vimrc ] && ln -s "$(pwd)/vim/.vimrc" ~/.vimrc
 
 
 # Reference local ~/.shell.dotfiles in ~/.bashrc and/or ~/.zshrc
