@@ -15,6 +15,7 @@ alias gcav="git commit -av"
 alias gcl="git clone"
 alias gco="git checkout"
 alias gl="git pull"
+alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
 
