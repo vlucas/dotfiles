@@ -56,9 +56,10 @@ set undoreload=10000
 
 " Colorscheme
 syntax enable
-set background=dark
-silent! colorscheme solarized
+" set background=dark
+" silent! colorscheme solarized
 highlight SignColumn ctermbg=8
+colo ThemerVim " https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim#output
 
 " Set wildcard ignore for ctrlp and ack/ag
 set wildignore+=*/tmp/*,node_modules/*,vendor/bundle/*,*/build/*,*/Resources/*,*.so,*.swp,*.zip,*.png,*.jpg,*.jpeg,*.gif,.gitkeep

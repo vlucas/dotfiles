@@ -1,10 +1,13 @@
 export PATH="$PATH:/opt/p4v-2019.1.1797168:/webdev/Tools/lazy/bin"
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto
 export P4CONFIG=/webdev/.perforce
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 export EDITOR=vim
 
 alias l="ls -lah"
+alias ..="cd .."
 
 alias mux="tmuxinator"
 alias tks="tmux kill-session"
@@ -18,5 +21,54 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
+
+# Perform an "ls" immedately after a "cd"
+function cd () {
+  if [[ $# > 0 ]]; then
+    builtin cd "$1" && clear && ls -lah
+  else
+    builtin cd "$@" && clear && ls -lah
+  fi
+}
+
+# Create a new directory and enter it
+function md() {
+  mkdir -p "$@" && cd "$@"
+}
+
+# Show git status in prompt
+function set_prompt() {
+  GIT_PS1_SHOWDIRTYSTATE=true
+  export PS1="\[$(tput setaf 7)\]\u@\h:\w\[$(tput setaf 2)\]\$(__git_ps1)\[$(tput setaf 7)\] $ \[$(tput sgr0)\]"
+}
+
+
+function shortwd() {
+  num_dirs=3
+  pwd_symbol="..."
+  newPWD="${PWD/#$HOME/~}"
+  if [ $(echo -n $newPWD | awk -F '/' '{print NF}') -gt $num_dirs ]; then
+      newPWD=$(echo -n $newPWD | awk -F '/' '{print $1 "/.../" $(NF-1) "/" $(NF)}')
+  fi
+  echo -n $newPWD
+}
+
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+if [ -t 0 ]; then
+  COLOR_RED="\033[0;31m"
+  COLOR_YELLOW="\033[0;33m"
+  COLOR_GREEN="\033[0;32m"
+  COLOR_OCHRE="\033[38;5;95m"
+  COLOR_BLUE="\033[0;34m"
+  COLOR_WHITE="\033[0;37m"
+  COLOR_RESET="\033[0m"
+
+  PS1='\n\e[38;5;211m$(shortwd)\e[38;5;48m $(git_branch)\e[0m$ '
+  export PS1
+fi
+
 
 [ -f ~/.shell.local ] && source ~/.shell.local
