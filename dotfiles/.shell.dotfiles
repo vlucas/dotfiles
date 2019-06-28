@@ -66,8 +66,8 @@ if [ -t 0 ]; then
   COLOR_WHITE="\033[0;37m"
   COLOR_RESET="\033[0m"
 
-  PS1='\n\e[38;5;211m$(shortwd)\e[38;5;48m $(git_branch)\e[0m$ '
-  export PS1
+  #PS1='\n\e[38;5;211m$(shortwd)\e[38;5;48m $(git_branch)\e[0m$ '
+  #export PS1
 fi
 
 

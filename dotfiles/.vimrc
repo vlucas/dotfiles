@@ -1,4 +1,3 @@
-set t_Co=256                                " Support for xterm with 256 colors (gets overriden in .gvimrc)
 set relativenumber                          " Show line numbers relative to each other
 set number                                  " Show the current lines number w/ relative numbers around it
 set ruler                                   " Show ruler
@@ -55,11 +54,13 @@ set undolevels=1000
 set undoreload=10000
 
 " Colorscheme
-syntax enable
-" set background=dark
-" silent! colorscheme solarized
+syntax on
+let g:solarized_termcolors=256
+set t_Co=256
+set background=dark
+colorscheme solarized
+
 highlight SignColumn ctermbg=8
-colo ThemerVim " https://github.com/mjswensen/themer/tree/master/cli/packages/themer-vim#output
 
 " Set wildcard ignore for ctrlp and ack/ag
 set wildignore+=*/tmp/*,node_modules/*,vendor/bundle/*,*/build/*,*/Resources/*,*.so,*.swp,*.zip,*.png,*.jpg,*.jpeg,*.gif,.gitkeep

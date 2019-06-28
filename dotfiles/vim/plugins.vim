@@ -15,6 +15,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'benmills/vimux'
 Plug 'mattboehm/vim-unstack' " parse stack traces
 
+Plug 'tpope/vim-pathogen'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat' " easily repeat map functions
 Plug 'tpope/vim-sensible' " sensible vim defaults
