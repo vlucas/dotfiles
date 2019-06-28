@@ -9,7 +9,7 @@ DOTFILES="$(pwd)/dotfiles"
 
 echo "Installing dotfiles at: $DOTFILES..."
 
-[ ! -f ~/.shell.dotfiles ] && ln -s "$DOTFILES/shell/.shell.dotfiles" ~/.shell.dotfiles
+[ ! -f ~/.shell.dotfiles ] && ln -s "$DOTFILES/.shell.dotfiles" ~/.shell.dotfiles
 [ ! -f ~/.tmux.conf ] && ln -s "$DOTFILES/.tmux.conf" ~/.tmux.conf
 [ ! -f ~/.tmux ] && ln -s "$DOTFILES/tmux" ~/.tmux
 [ ! -f ~/.vimrc ] && ln -s "$DOTFILES/.vimrc" ~/.vimrc
