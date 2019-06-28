@@ -68,5 +68,5 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-source ~/.dotfiles/vim/plugins.vim
-source ~/.dotfiles/vim/ctrlp.vim
+source ~/.vim/plugins.vim
+source ~/.vim/ctrlp.vim
