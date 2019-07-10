@@ -44,6 +44,9 @@ set cindent                                 " Recommended seting for automatic C
 set colorcolumn=120
 set textwidth=120
 
+" Clipboard (vim must be installed with +clipboard feature (run vim --version))
+set clipboard=unnamedplus
+
 " Undo
 if !isdirectory(expand("~/.vim/.undo/"))
   silent !mkdir -p ~/.vim/.undo/
