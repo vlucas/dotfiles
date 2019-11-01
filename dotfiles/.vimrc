@@ -45,7 +45,8 @@ set colorcolumn=120
 set textwidth=120
 
 " Clipboard (vim must be installed with +clipboard feature (run vim --version))
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Undo
 if !isdirectory(expand("~/.vim/.undo/"))
@@ -71,6 +72,15 @@ set wildignore+=*/tmp/*,node_modules/*,vendor/bundle/*,*/build/*,*/Resources/*,*
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" NERDTree toggle hotkey
+map <C-n> :NERDTreeToggle<CR>
+" exit NERDTree if it is the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Enable completion where available.
+" This setting must be set before ALE is loaded.
+"let g:ale_completion_enabled = 1
 
 source ~/.vim/plugins.vim
 source ~/.vim/ctrlp.vim
