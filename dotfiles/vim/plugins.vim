@@ -21,9 +21,8 @@ Plug 'tpope/vim-repeat' " easily repeat map functions
 Plug 'tpope/vim-sensible' " sensible vim defaults
 Plug 'tmhedberg/matchit' " extend % mathcing to HTML, LaTeX, etc.
 
-" Autocomplete
-"Plug 'ycm-core/YouCompleteMe' " awesome, but requires compilation
-Plug 'lifepillar/vim-mucomplete' "lighter weight, but not that good...
+" TypeScript + autocompletion
+Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
 " Text objs
 Plug 'kurkale6ka/vim-pairs'
@@ -53,25 +52,5 @@ Plug 'leafgarland/typescript-vim'
 
 " Colors
 Plug 'altercation/vim-colors-solarized'
-
-" Prettier
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': [
-    \ 'javascript',
-    \ 'typescript',
-    \ 'css',
-    \ 'less',
-    \ 'scss',
-    \ 'json',
-    \ 'graphql',
-    \ 'markdown',
-    \ 'vue',
-    \ 'lua',
-    \ 'php',
-    \ 'python',
-    \ 'ruby',
-    \ 'html',
-    \ 'swift' ] }
 
 call plug#end()

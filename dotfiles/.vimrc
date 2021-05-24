@@ -78,6 +78,40 @@ map <C-n> :NERDTreeToggle<CR>
 " exit NERDTree if it is the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Prettier auto-formatting on save
+" =============================================
+let g:prettier#autoformat_config_present = 1
+let g:prettier#autoformat_require_pragma = 0
+" =============================================
+
+
+" TypeScript CoC
+" @link https://github.com/neoclide/coc.nvim#example-vim-configuration
+" =============================================
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-prettier', 'coc-json', 'coc-css', 'coc-markdownlint' ]
+
+" Add Prettier command to format whole file
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Formatting selection
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" =============================================
+
 " Enable completion where available.
 " This setting must be set before ALE is loaded.
 "let g:ale_completion_enabled = 1
