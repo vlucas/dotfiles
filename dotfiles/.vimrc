@@ -105,6 +105,9 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
+" Apply AutoFix/"quick fix" to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
