@@ -53,4 +53,26 @@ Plug 'leafgarland/typescript-vim'
 " Colors
 Plug 'altercation/vim-colors-solarized'
 
+" Prettier
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': [
+    \ 'javascript',
+    \ 'javascriptreact',
+    \ 'typescript',
+    \ 'typescriptreact',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
+
 call plug#end()
