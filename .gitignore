@@ -1,2 +1,4 @@
 dotfiles/vim/.*
+dotfiles/vim/vim
 dotfiles/vim/plugged/
+dotfiles/tmux/tmux

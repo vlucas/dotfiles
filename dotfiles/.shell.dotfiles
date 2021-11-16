@@ -5,6 +5,7 @@ export EDITOR=vim
 
 alias l="ls -lah"
 alias ..="cd .."
+alias c="cd ~/Code"
 
 alias mux="tmuxinator"
 alias tks="tmux kill-session"
