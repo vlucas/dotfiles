@@ -2,6 +2,11 @@
 
 For use with any unix-based machine. I have used these dotfiles on both Mac and Ubuntu Linux.
 
+## Pre-Requisites
+
+- `node` and `npm` installed (via `brew install node` or other)
+- `tmux` installed for config
+
 ## EASY SETUP
 
 ```
